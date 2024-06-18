@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rvBadgeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="50dp"
+        app:cardBackgroundColor="@color/blue"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="@+id/rvMainContainer"
+        app:layout_constraintTop_toTopOf="@+id/rvMainContainer"
+        app:layout_constraintBottom_toTopOf="@id/rvMainContainer">
+
+        <TextView
+            android:id="@+id/rvBadgeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textStyle="normal|italic"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="2dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rvMainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/grey1"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/rvPriceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rvCircle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="@color/red"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/rvDepartureContainer"
+                app:layout_constraintBottom_toBottomOf="@id/rvDepartureContainer"/>
+
+            <LinearLayout
+                android:id="@+id/rvDepartureContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/rvCircle"
+                app:layout_constraintTop_toBottomOf="@id/rvPriceTv"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/rvTimeDepartureTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:textStyle="normal|italic"/>
+
+                <TextView
+                    android:id="@+id/rvCodeDepartureTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="14sp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/grey6"
+                    android:textStyle="normal|italic"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rvDivider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/divider"
+                android:textColor="@color/grey6"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@id/rvDepartureContainer"
+                app:layout_constraintTop_toTopOf="@id/rvDepartureContainer"/>
+
+            <LinearLayout
+                android:id="@+id/rvArrivalContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="4dp"
+                android:layout_marginVertical="20dp"
+                app:layout_constraintStart_toEndOf="@id/rvDivider"
+                app:layout_constraintTop_toBottomOf="@id/rvPriceTv">
+
+                <TextView
+                    android:id="@+id/rvTimeArrivalTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:textStyle="normal|italic"/>
+
+                <TextView
+                    android:id="@+id/rvCodeArrivalTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="14sp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/grey6"
+                    android:textStyle="normal|italic"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rvOtherInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/rvArrivalContainer"
+                app:layout_constraintTop_toTopOf="@id/rvArrivalContainer"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

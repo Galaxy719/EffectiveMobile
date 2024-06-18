@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shorts"
+    app:startDestination="@id/shortsFragment">
+
+    <fragment
+        android:id="@+id/shortsFragment"
+        android:name="uz.developersdreams.effectivemobile.ui.shorts_ui.ShortsFragment"
+        android:label="fragment_shorts"
+        tools:layout="@layout/fragment_shorts" />
+</navigation>

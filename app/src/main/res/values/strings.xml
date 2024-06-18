@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">EffectiveMobile</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="airTickets">Авиабилеты</string>
+    <string name="hotels">Отели</string>
+    <string name="shorts">Короче</string>
+    <string name="subscription">Подписки</string>
+    <string name="profile">Профиль</string>
+    <string name="search_tickets">Поиск дешевых авиабилетов</string>
+    <string name="search">search</string>
+    <string name="hint_from">Откуда - Москва</string>
+    <string name="hint_to">Куда - Турция</string>
+    <string name="musically">Музыкально отлететь</string>
+    <string name="image">image</string>
+    <string name="seeAllPlace">Показать все места</string>
+
+    <string name="complexRoute">Сложный маршрут</string>
+    <string name="anywhere">Куда угодно</string>
+    <string name="weekend">Выходные</string>
+    <string name="hotTickets">Горячие билеты</string>
+    <string name="back">обратно</string>
+    <string name="directFlights">Прямые рейсы</string>
+    <string name="showAll">Показать все</string>
+    <string name="seeAllTickets">Просмотреть все билеты</string>
+    <string name="subscribeToPrice">Подписка на цену</string>
+    <string name="divider">-</string>
+</resources>

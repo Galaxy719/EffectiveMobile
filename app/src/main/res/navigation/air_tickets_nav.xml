@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/air_tickets"
+    app:startDestination="@id/airTicketsFragment">
+
+    <fragment
+        android:id="@+id/airTicketsFragment"
+        android:name="uz.developersdreams.effectivemobile.ui.air_tickets_ui.AirTicketsFragment"
+        android:label="fragment_air_tickets"
+        tools:layout="@layout/fragment_air_tickets">
+        <action
+            android:id="@+id/action_airTicketsFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/searchFragment"
+        android:name="uz.developersdreams.effectivemobile.ui.search_ui.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_searchSelectedCountryFragment"
+            app:destination="@id/searchSelectedCountryFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/searchSelectedCountryFragment"
+        android:name="uz.developersdreams.effectivemobile.ui.search_selected_country_ui.SearchSelectedCountryFragment"
+        android:label="fragment_search_selected_country"
+        tools:layout="@layout/fragment_search_selected_country" >
+        <action
+            android:id="@+id/action_searchSelectedCountryFragment_to_showAllTicketsFragment"
+            app:destination="@id/showAllTicketsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showAllTicketsFragment"
+        android:name="uz.developersdreams.effectivemobile.ui.show_all_tickets_ui.ShowAllTicketsFragment"
+        android:label="fragment_show_all_tickets"
+        tools:layout="@layout/fragment_show_all_tickets" >
+        <argument
+            android:name="ticket_info"
+            app:argType="string" />
+        <argument
+            android:name="places_info"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
